@@ -1,4 +1,4 @@
-#check proxy
+#Check proxy
 
 ##简介
 

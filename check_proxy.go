@@ -29,7 +29,7 @@ func main() {
 }
 
 func check(proxy string) { 
-    cmd := exec.Command("/bin/sh", "-c", fmt.Sprintf("curl -I --connect-timeout 2 --proxy http://%s http://www.baidu.com", proxy))
+    cmd := exec.Command("/bin/sh", "-c", fmt.Sprintf("curl -I --connect-timeout 2 -m 2 --proxy http://%s http://www.baidu.com", proxy))
     result, err := cmd.Output()
     can_use := false
     if err == nil {
